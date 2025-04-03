@@ -1,8 +1,9 @@
 async function loadComponent(id, file) {
+    console.log('first')
     try {
         const response = await fetch(file);
         if (!response.ok) {
-            throw new Error(`Error loading ${file}: ${response.statusText}`);
+            console.log(`Error loading the file ${file}`)
         }
         const content = await response.text();
         document.getElementById(id).innerHTML = content;
@@ -17,18 +18,18 @@ function toggleMenu() {
     menu.classList.toggle("hidden");
   }
 
-loadComponent("navbar", "navBar.html");
-// loadComponent("hello-section", "helloPage.html");
-// loadComponent("scope-section", "scope.html");
-// loadComponent("offer-section", "offerPage.html");
-// loadComponent("user-experience-section", "userExperiencePage.html");
-// loadComponent("actions-tracked-section", "actionsTracked.html");
-// loadComponent("search-details-section", "searchDetailsPage.html");
-// loadComponent("search-history-section", "searchHistory.html");
-// loadComponent("matched-offers-section", "matchedOffers.html");
-// loadComponent("stricking-balance-section", "strickingBalance.html");
-// loadComponent("effortless-design-section", "effortlesDesign.html");
-// loadComponent("styleguide-section", "styleguide.html");
-// loadComponent("colors-section", "colors.html");
-loadComponent("projects-section", "similarProjects.html");
-loadComponent("work-together-section", "workTogether.html");
+loadComponent("navbar", "html/navBar.html");
+loadComponent("hello-section", "html/helloPage.html");
+loadComponent("scope-section", "html/scope.html");
+loadComponent("offer-section", "html/offerPage.html");
+loadComponent("user-experience-section", "html/userExperiencePage.html");
+loadComponent("actions-tracked-section", "html/actionsTracked.html");
+loadComponent("search-details-section", "html/searchDetailsPage.html");
+loadComponent("search-history-section", "html/searchHistory.html");
+loadComponent("matched-offers-section", "html/matchedOffers.html");
+loadComponent("stricking-balance-section", "html/strickingBalance.html");
+loadComponent("effortless-design-section", "html/effortlesDesign.html");
+loadComponent("styleguide-section", "html/styleguide.html");
+loadComponent("colors-section", "html/colors.html");
+loadComponent("projects-section", "html/similarProjects.html");
+loadComponent("work-together-section", "html/workTogether.html");
