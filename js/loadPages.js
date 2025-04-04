@@ -33,3 +33,4 @@ loadComponent("styleguide-section", "html/styleguide.html");
 loadComponent("colors-section", "html/colors.html");
 loadComponent("projects-section", "html/similarProjects.html");
 loadComponent("work-together-section", "html/workTogether.html");
+loadComponent("footer-section", "html/footer.html");
